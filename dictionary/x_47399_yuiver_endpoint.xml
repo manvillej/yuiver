@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Endpoint" max_length="40" name="x_47399_yuiver_endpoint" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Endpoint" max_length="120" name="endpoint" type="string"/>
+    </element>
+</database>

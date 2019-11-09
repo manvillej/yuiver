@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="">Custom Applications</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order/>
+        <roles>admin</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-09 16:53:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1c7d0245db0100107d297b60399619d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>yuiver</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="yuiver" source="x_47399_yuiver">96ccc645db0100107d297b6039961947</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="yuiver">96ccc645db0100107d297b6039961947</sys_scope>
+        <sys_update_name>sys_app_application_1c7d0245db0100107d297b60399619d0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-09 16:53:08</sys_updated_on>
+        <title>yuiver</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="endpoint" label="Endpoint" language="en" table="x_47399_yuiver_endpoint">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>endpoint</element>
+            <help/>
+            <hint/>
+            <label>Endpoint</label>
+            <language>en</language>
+            <name>x_47399_yuiver_endpoint</name>
+            <plural>Endpoints</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-11-09 16:51:58</sys_created_on>
+            <sys_id>072d8685db0100107d297b60399619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Endpoint</sys_name>
+            <sys_package display_value="yuiver" source="x_47399_yuiver">96ccc645db0100107d297b6039961947</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="yuiver">96ccc645db0100107d297b6039961947</sys_scope>
+            <sys_update_name>sys_documentation_x_47399_yuiver_endpoint_endpoint_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-11-09 16:51:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
