@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>normal</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	response.setContentType("text/html");
+	
+	var writer = response.getStreamWriter();
+	var session = gs.getSession();
+	var loggedIn = session.isLoggedIn();
+	var token = session.getSessionToken();
+	
+	response.setHeader('X-Is-Logged-In',loggedIn);
+	if(!loggedIn){
+		response.setStatus(302);
+		response.setHeader('Location','/session_timeout.do');
+	} else {
+		response.setStatus(200);
+		var gr = new GlideRecord("x_47399_yuiver_endpoint");
+		
+		if(gr.get("endpoint",request.pathParams.endpoint)){
+			var data_html = gr.getValue("data");
+			var auth_html = '<script>window.servicenowUserToken="' + token + '";</script></head>';
+			
+			data_html = data_html.replace('</head>',auth_html);
+			writer.writeString(data_html);
+		} else{
+			writer.writeString("<html><head><body><p><b>Thank you for your response from "+ request.pathParams.endpoint + ".</b></p>"+"Logged in: "+loggedIn + ". token: "+token +"</body></head></html>");
+		}
+	}
+	
+	
+	
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_47399_yuiver/yuiver/{endpoint}</operation_uri>
+        <produces>text/html</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/{endpoint}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-09 17:48:17</sys_created_on>
+        <sys_id>d01a16c1db4100107d297b6039961907</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>normal</sys_name>
+        <sys_package display_value="yuiver" source="x_47399_yuiver">96ccc645db0100107d297b6039961947</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="yuiver">96ccc645db0100107d297b6039961947</sys_scope>
+        <sys_update_name>sys_ws_operation_d01a16c1db4100107d297b6039961907</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-28 19:36:56</sys_updated_on>
+        <web_service_definition display_value="yuiver">081e0209db0100107d297b60399619bc</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

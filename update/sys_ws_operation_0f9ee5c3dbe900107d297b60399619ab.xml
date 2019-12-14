@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>creates or updates a resource</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+	//TODO: get data from request
+	var data = request.body.data;
+	
+	
+	//TODO: add failure code here
+	gs.info(GlideStringUtil.isBase64(data.data));
+	
+	//TODO: add source check for endpoint
+	var endpoint = data.endpoint;
+	
+	// success
+	var HTML_DOC = gs.base64Decode(data.data);
+	
+
+	var gr = new GlideRecord("x_47399_yuiver_endpoint");
+	if(gr.get("endpoint", endpoint)){
+		//TODO: add response code for creating new endpoint
+		gr.setValue("data", HTML_DOC);
+		gr.update();
+		response.setBody({"success":"true","action":"update"});
+	} else {
+		//TODO: add response code for updating endpoint
+		gr = new GlideRecord("x_47399_yuiver_endpoint");
+		gr.setValue("endpoint", endpoint);
+		gr.setValue("data", HTML_DOC);
+		gr.insert();
+		response.setBody({"success":"true","action":"insert"});
+	}
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_47399_yuiver/deploy</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-10 16:18:02</sys_created_on>
+        <sys_id>0f9ee5c3dbe900107d297b60399619ab</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>creates or updates a resource</sys_name>
+        <sys_package display_value="yuiver" source="x_47399_yuiver">96ccc645db0100107d297b6039961947</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="yuiver">96ccc645db0100107d297b6039961947</sys_scope>
+        <sys_update_name>sys_ws_operation_0f9ee5c3dbe900107d297b60399619ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-11 19:33:46</sys_updated_on>
+        <web_service_definition display_value="deploy">1b8ea58fdbe500107d297b60399619d7</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
