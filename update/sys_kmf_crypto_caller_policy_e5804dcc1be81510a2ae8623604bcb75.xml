@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_kmf_crypto_caller_policy">
+    <sys_kmf_crypto_caller_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <approval_type/>
+        <check_script_hash>false</check_script_hash>
+        <crypto_module display_value="com_snc_platform_security_oauth_glideencrypter">8e4dffa067331010b28becccb585efc1</crypto_module>
+        <crypto_spec display_value="com_snc_platform_security_oauth_glideencrypter --- Symmetric Key Wrapping/Unwrapping">0a4d33e067331010b28becccb585ef96</crypto_spec>
+        <granular_operation/>
+        <impersonation>false</impersonation>
+        <instance_recipient/>
+        <owner>bedd37fcdb0cf0107527d7c8f4961970</owner>
+        <policy_name>AutoGen-scope-x_47399_yuiver-global.com_snc_platform_security_oauth_glideencrypter</policy_name>
+        <result>track</result>
+        <script_hash/>
+        <script_table/>
+        <signature_data/>
+        <specify_purpose>false</specify_purpose>
+        <sys_class_name>sys_kmf_crypto_caller_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-02 17:07:31</sys_created_on>
+        <sys_id>e5804dcc1be81510a2ae8623604bcb75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AutoGen-scope-x_47399_yuiver-global.com_snc_platform_security_oauth_glideencrypter</sys_name>
+        <sys_package display_value="yuiver" source="x_47399_yuiver">96ccc645db0100107d297b6039961947</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="yuiver">96ccc645db0100107d297b6039961947</sys_scope>
+        <sys_update_name>sys_kmf_crypto_caller_policy_e5804dcc1be81510a2ae8623604bcb75</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-02 17:07:31</sys_updated_on>
+        <target_role/>
+        <target_scope display_value="yuiver">96ccc645db0100107d297b6039961947</target_scope>
+        <target_script/>
+        <type>3</type>
+        <used>false</used>
+    </sys_kmf_crypto_caller_policy>
+</record_update>
